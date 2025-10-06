@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useRef, useEffect } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 
 type Props = {
   /**
@@ -72,7 +72,7 @@ const RenderIfVisible = ({
       }
     }
     return () => {}
-  }, [])
+  }, [root, visibleOffset])
 
   useEffect(() => {
     if (isVisible) {
